@@ -1,6 +1,8 @@
 <?php
 $page_title = "IT支援の外部チーム｜株式会社KEEP ON";
 $page_description = "AWS設計、社内IT代行、ITアウトソーシング、セキュリティ対策、ISO認証サポートまで。中小企業向けのIT支援サービスを提供しています。";
+$og_title = "AWS設計・IT支援をワンストップで｜株式会社KEEP ON";
+$og_description = "中小〜大手企業のIT課題を“社内IT担当”視点で支援。AWS設計、社内ヘルプデスク、セキュリティ対応などまるごと対応。";
 $page_css = ["top.css"];
 include __DIR__ . "/includes/header.php";
 
