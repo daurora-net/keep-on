@@ -1,0 +1,39 @@
+/* TOPページ専用 */
+.hero {
+  background: #e0f2ff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+.hero h1 {
+  font-size: clamp(1.5rem, 3vw + 1rem, 2.25rem);
+  margin: 0 0 0.5rem;
+}
+.hero__cta .btn-primary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0.5rem;
+  background: #0a66c2;
+  color: #fff;
+  text-decoration: none;
+}
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
+.cases,
+.flow,
+.certs {
+  text-align: center;
+}
+a.btn-link {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+a:focus {
+  outline: 3px solid #0a66c2;
+  outline-offset: 2px;
+}

@@ -1,0 +1,107 @@
+/* よくあるご相談＆導入の流れページ専用 */
+
+.flow {
+  .page-head {
+    margin: 2rem 0 1.5rem;
+
+    h1 {
+      font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+      margin: 0 0 0.5rem;
+    }
+    .page-lead {
+      color: #555;
+    }
+  }
+
+  .faq-topics {
+    margin: 2rem 0;
+
+    ul {
+      list-style: disc;
+      margin-left: 1.25rem;
+
+      li {
+        margin: 0.4rem 0;
+      }
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid #333;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .steps {
+    margin: 2rem 0;
+
+    .step-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 1rem;
+
+      li {
+        border: 1px solid #eee;
+        border-radius: 8px;
+        padding: 1rem;
+
+        h3 {
+          margin: 0 0 0.4rem;
+          font-size: 1.1rem;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .faq {
+    margin: 2rem 0;
+
+    .qa {
+      border-top: 1px solid #eee;
+      padding: 1rem 0;
+
+      h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1.05rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .page-cta {
+    margin: 2.5rem 0 0;
+    padding: 1.5rem;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+
+    h2 {
+      margin: 0 0 0.4rem;
+    }
+    .cta a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid #333;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

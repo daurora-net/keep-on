@@ -1,0 +1,49 @@
+/* サイトマップページ専用 */
+
+.sitemap {
+  .page-head {
+    margin: 2rem 0 1.5rem;
+
+    h1 {
+      font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+      margin: 0 0 0.5rem;
+    }
+    .page-lead {
+      color: #555;
+    }
+  }
+
+  .map-group {
+    margin: 1.5rem 0;
+
+    h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0.5rem 1rem;
+      margin: 0;
+      border: 1px solid #eee;
+      border-radius: 8px;
+
+      li {
+        padding: 0.4rem 0;
+        border-top: 1px dashed #f0f0f0;
+
+        &:first-child {
+          border-top: 0;
+        }
+
+        a {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

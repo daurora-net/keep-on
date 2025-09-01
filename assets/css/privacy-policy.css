@@ -1,0 +1,83 @@
+/* プライバシーポリシー・情報セキュリティ基本方針ページ専用 */
+
+.policy {
+  .page-head {
+    margin: 2rem 0 1.5rem;
+
+    h1 {
+      font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+      margin: 0 0 0.5rem;
+    }
+    .page-lead {
+      color: #555;
+    }
+  }
+
+  .section-nav {
+    margin: 1rem 0 2rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      a {
+        display: inline-block;
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #e5e5e5;
+        border-radius: 999px;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .policy-section {
+    margin: 2rem 0;
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 0.75rem;
+    }
+    h3 {
+      font-size: 1.05rem;
+      margin: 1rem 0 0.25rem;
+    }
+    ul {
+      margin-left: 1.25rem;
+    }
+    address {
+      font-style: normal;
+    }
+    .note {
+      color: #777;
+      font-size: 0.9rem;
+    }
+  }
+
+  .page-cta {
+    margin: 2.5rem 0 0;
+    padding: 1.5rem;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
+
+    .cta a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid #333;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
