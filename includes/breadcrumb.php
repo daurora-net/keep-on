@@ -4,7 +4,7 @@ if (!isset($breadcrumb_title)) {
   $breadcrumb_title = "";
 }
 ?>
-<nav class="breadcrumb" aria-label="breadcrumb">
+<nav class="breadcrumb" aria-label="パンくずリスト">
   <ol>
     <li><a href="/">HOME</a></li>
     <li aria-current="page"><?php echo htmlspecialchars($breadcrumb_title, ENT_QUOTES, 'UTF-8'); ?></li>

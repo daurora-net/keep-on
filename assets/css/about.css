@@ -1,89 +1,77 @@
 /* 会社概要ページ専用 */
 
-.about {
-  &__head {
-    margin: 2rem 0 1.5rem;
 
-    h1 {
-      font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
-      margin: 0 0 0.5rem;
-    }
-    .about__lead {
-      color: #555;
-    }
-  }
-
-  &__section {
-    margin: 2rem 0;
-    h2 {
-      font-size: 1.25rem;
-      margin: 0 0 0.75rem;
-    }
-  }
-
-  /* 会社概要テーブル風 */
-  .table-like {
-    display: grid;
-    gap: 0.5rem;
-
-    > div {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      gap: 1rem;
-      padding: 0.75rem 1rem;
-      border: 1px solid #eee;
-      border-radius: 6px;
-
-      dt {
-        font-weight: 600;
-        color: #333;
-      }
-      dd {
-        margin: 0;
-        color: #333;
-      }
-    }
-  }
-
-  /* 資格一覧 */
-  .cert-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 0.5rem;
-
-    li {
-      padding: 0.75rem 1rem;
-      border: 1px solid #eee;
-      border-radius: 6px;
-
-      .note {
-        color: #777;
-        font-size: 0.875rem;
-        margin-left: 0.5rem;
-      }
-    }
-  }
-
-  /* リンク集 */
-  .link-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 0.5rem;
-
-    li a {
-      display: inline-block;
-      padding: 0.75rem 1rem;
-      border: 1px solid #eee;
-      border-radius: 6px;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
+.about__head {
+  margin: 2rem 0 1.5rem;
+}
+.about__head h1 {
+  font-size: clamp(1.5rem, 2vw + 1rem, 2rem);
+  margin: 0 0 0.5rem;
+}
+.about__lead {
+  color: #555;
+}
+.about__section {
+  margin: 2rem 0;
+}
+.about__section h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+/* 会社概要テーブル風 */
+.table-like {
+  display: grid;
+  gap: 0.5rem;
+}
+.table-like > div {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.table-like dt {
+  font-weight: 600;
+  color: #333;
+}
+.table-like dd {
+  margin: 0;
+  color: #333;
+}
+/* 資格一覧 */
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.cert-list li {
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+.cert-list .note {
+  color: #777;
+  font-size: 0.875rem;
+  margin-left: 0.5rem;
+}
+/* リンク集 */
+.link-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+.link-list li a {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.link-list li a:hover {
+  text-decoration: underline;
 }

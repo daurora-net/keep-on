@@ -7,6 +7,16 @@ $og_description = "株式会社KEEP ONの公式サイト全体のページ構成
 $breadcrumb_title = "サイトマップ";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: WebPage
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "WebPage",
+  "name" => "サイトマップ｜株式会社KEEP ON",
+  "description" => "株式会社KEEP ONの公式サイト全体のページ構成をご案内します。会社概要、サービス紹介、導入事例、お問い合わせなど、目的のページをすぐに見つけられます。",
+  "url" => $base_url . '/sitemap/'
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>

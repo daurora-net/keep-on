@@ -7,6 +7,16 @@ $og_description = "IT支援に関するご相談や資料のご請求はこち�
 $breadcrumb_title = "お問い合わせ";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: ContactPage
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "ContactPage",
+  "name" => "IT支援のご相談はこちら｜株式会社KEEP ON",
+  "description" => "AWS設計、社内IT代行、セキュリティ支援のご相談や資料請求はこちらから。お気軽にお問い合わせください。",
+  "url" => $base_url . '/contact/'
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>

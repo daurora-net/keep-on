@@ -32,13 +32,26 @@ $page_slug = $page_path === '' ? 'index' : str_replace('/', '-', $page_path);
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title><?php echo $page_title ?? "株式会社KEEP ON"; ?></title>
-  <meta name="description" content="<?php echo $page_description ?? "株式会社KEEP ON公式サイト"; ?>">
 
-  <meta property="og:title" content="<?php echo $og_title ?? $page_title; ?>">
-  <meta property="og:description" content="<?php echo $og_description ?? $page_description; ?>">
+  <?php
+    // 絶対URL生成
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'];
+    $path = $_SERVER['REQUEST_URI'];
+    $abs_url = $scheme . '://' . $host . $path;
+    $canonical_url = $scheme . '://' . $host . strtok($path, '?');
+    // OGP type
+    $og_type = ($page_slug === 'index') ? 'website' : 'article';
+  ?>
+  <title><?php echo htmlspecialchars($page_title ?? "株式会社KEEP ON", ENT_QUOTES, 'UTF-8'); ?></title>
+  <meta name="description" content="<?php echo htmlspecialchars($page_description ?? "株式会社KEEP ON公式サイト", ENT_QUOTES, 'UTF-8'); ?>">
+
+  <meta property="og:title" content="<?php echo htmlspecialchars($og_title ?? $page_title, ENT_QUOTES, 'UTF-8'); ?>">
+  <meta property="og:description" content="<?php echo htmlspecialchars($og_description ?? $page_description, ENT_QUOTES, 'UTF-8'); ?>">
   <meta property="og:image" content="/assets/img/logo-ogp.png">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="<?php echo $og_type; ?>">
+  <meta property="og:url" content="<?php echo htmlspecialchars($abs_url, ENT_QUOTES, 'UTF-8'); ?>">
+  <link rel="canonical" href="<?php echo htmlspecialchars($canonical_url, ENT_QUOTES, 'UTF-8'); ?>">
 
   <!-- 共通CSS -->
   <link rel="stylesheet" href="/assets/css/common.css">
@@ -65,7 +78,11 @@ $page_slug = $page_path === '' ? 'index' : str_replace('/', '-', $page_path);
   <!-- End Google Tag Manager (noscript) -->
 
   <header>
-    <h1>まるで社内IT担当のように、一社一社と向き合う。</h1>
+    <?php if ($page_slug === 'index'): ?>
+      <h1>まるで社内IT担当のように、一社一社と向き合う。</h1>
+    <?php else: ?>
+      <p class="site-tagline">まるで社内IT担当のように、一社一社と向き合う。</p>
+    <?php endif; ?>
     <nav>
       <ul>
         <li><a href="/about/">会社概要・資格情報</a></li>

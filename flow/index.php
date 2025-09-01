@@ -7,6 +7,16 @@ $og_description = "ご相談から支援開始までのステップをわかり�
 $breadcrumb_title = "ご相談の流れ・よくあるご質問";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: FAQPage
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "FAQPage",
+  "name" => "IT支援ご相談の流れ｜株式会社KEEP ON",
+  "description" => "ご相談から支援開始までの流れをわかりやすく解説。よくあるご質問も併せて、導入前の不安を解消します。",
+  "url" => $base_url . '/flow/'
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>

@@ -7,6 +7,16 @@ $og_description = "AWS設計・セキュリティ対応・社内IT代行など�
 $breadcrumb_title = "導入事例";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: CollectionPage
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "CollectionPage",
+  "name" => "IT支援の導入事例｜KEEP ON",
+  "description" => "中小企業〜大手企業のAWS導入、ITヘルプデスク運用、ISO / セキュリティ支援など、実際の支援事例をご紹介します。",
+  "url" => $base_url . '/cases/'
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>
