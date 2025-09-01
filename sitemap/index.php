@@ -61,7 +61,7 @@ echo '<script type="application/ld+json">' . json_encode([
       <h2>お問い合わせ</h2>
       <ul>
         <li><a href="/contact/">お問い合わせ・資料請求</a></li>
-        <li><a href="/contact/thanks/">お問い合わせ完了（サンクス）</a></li>
+  <li><a href="/contact/thanks">お問い合わせ完了（サンクス）</a></li>
       </ul>
     </section>
   </div>
