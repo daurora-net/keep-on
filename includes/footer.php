@@ -1,5 +1,5 @@
     <footer>
-      <ul>
+  <ul aria-label="フッターメニュー">
         <li><a href="/privacy-policy/">プライバシーポリシー</a></li>
         <li><a href="/sitemap/">サイトマップ</a></li>
       </ul>

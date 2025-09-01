@@ -7,6 +7,21 @@ $og_description = "クラウド・セキュリティ・社内IT代行を軸と�
 $breadcrumb_title = "サービス紹介";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: Service
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Service",
+  "provider" => [
+    "@type" => "Organization",
+    "name" => "株式会社KEEP ON",
+    "url" => $base_url . '/services/'
+  ],
+  "name" => "AWS設計・IT支援サービス一覧",
+  "description" => "AWS設計・ITヘルプデスク・セキュリティ対策・社内IT代行まで。御社のIT課題に柔軟に対応する株式会社KEEP ONの支援メニューをご紹介。",
+  "url" => $base_url . '/services/'
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>

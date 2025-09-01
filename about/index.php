@@ -7,6 +7,22 @@ $og_description = "ISO27001取得、AWSパートナーなど信頼の背景を�
 $breadcrumb_title = "会社概要・資格情報";
 
 include __DIR__ . "/../includes/header.php";
+
+// 構造化データ: Organization
+$base_url = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'];
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Organization",
+  "@id" => $base_url . '/about/',
+  "name" => "株式会社KEEP ON",
+  "url" => $base_url . '/about/',
+  "logo" => $base_url . '/assets/img/logo-ogp.png',
+  "description" => "株式会社KEEP ONの会社概要、設立年、代表者プロフィール、ISO27001取得やAWSパートナー認定などの資格・認証をご紹介。",
+  "sameAs" => [
+    "https://www.facebook.com/keep-on",
+    "https://www.linkedin.com/company/keep-on"
+  ]
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main>

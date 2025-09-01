@@ -3,6 +3,20 @@ $page_title = "IT支援の外部チーム｜株式会社KEEP ON";
 $page_description = "AWS設計、社内IT代行、ITアウトソーシング、セキュリティ対策、ISO認証サポートまで。中小企業向けのIT支援サービスを提供しています。";
 $page_css = ["top.css"];
 include __DIR__ . "/includes/header.php";
+
+// 構造化データ: Organization
+echo '<script type="application/ld+json">' . json_encode([
+  "@context" => "https://schema.org",
+  "@type" => "Organization",
+  "name" => "株式会社KEEP ON",
+  "url" => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/',
+  "logo" => ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . '/assets/img/logo-ogp.png',
+  "description" => "AWS設計、社内IT代行、ITアウトソーシング、セキュリティ対策、ISO認証サポートまで。中小企業向けのIT支援サービスを提供しています。",
+  "sameAs" => [
+    "https://www.facebook.com/keep-on",
+    "https://www.linkedin.com/company/keep-on"
+  ]
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) . '</script>';
 ?>
 
 <main id="main">
