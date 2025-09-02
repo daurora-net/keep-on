@@ -1,4 +1,14 @@
-
+/* TOPページ用トークン */
+:root {
+  --ko-primary: #EAA03E;
+  --ko-primary-dark: #D9891E;
+  --ko-deep: #263238;
+  --ko-muted: #6B7280;
+  --ko-bg: #FFF9F0;
+  --ko-card: #FFFFFF;
+  --radius-xl: 20px;
+  --shadow-md: 0 8px 24px rgba(0,0,0,.08);
+}
 body {
   font-family: sans-serif;
   margin: 0;
